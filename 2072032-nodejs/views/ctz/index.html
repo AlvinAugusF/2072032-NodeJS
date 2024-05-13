@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penduduk Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Body background color */
+        body {
+            background-color: #f0f5ff; /* Light blue background */
+        }
+
+        /* Navbar background color */
+        .navbar {
+            background-color: #007bff; /* Blue Navbar */
+        }
+
+        /* Navbar text color */
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff; /* White text color */
+        }
+
+        /* Breadcrumb text color */
+        .breadcrumb-item a {
+            color: #007bff; /* Blue breadcrumb link color */
+        }
+
+        /* Card background color */
+        .card {
+            background-color: #fff; /* White card background */
+        }
+
+        /* Button color */
+        .btn-success {
+            background-color: #007bff; /* Blue button background */
+            border-color: #007bff; /* Blue button border */
+        }
+
+        /* Table header background color */
+        .table thead th {
+            background-color: #007bff; /* Blue table header background */
+            color: #fff; /* White table header text color */
+        }
+
+        /* Table row hover color */
+        .table tbody tr:hover {
+            background-color: #f0f8ff; /* Light blue hover color */
+        }
+    </style>
+</head>
+<body>
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Penduduk Page</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Penduduk Page</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="card p-4">
+            <div class="card-title">
+                <a href="create.html" role="button" class="btn btn-success">Tambah Penduduk</a>
+            </div>
+            <div class="card-body">
+                <table id="table-kk" class="table table-striped">
+                    <caption>List of penduduk</caption>
+                    <thead>
+                    <tr>
+                        <th>NIK</th>
+                        <th>Nama</th>
+                        <th>Foto</th>
+                        <th>Details</th>
+                        <th>No. KK - Nama Kepala Keluarga</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Mock data -->
+                    <tr>
+                        <td>123456789</td>
+                        <td>John Doe</td>
+                        <td><img src="profile_picture.jpg" alt="Foto Penduduk"></td>
+                        <td>
+                            <p><b>Alamat: </b>Jl. Contoh No. 123</p>
+                            <p><b>Tanggal Lahir: </b>1990-01-01</p>
+                            <p><b>Golongan Darah: </b>O</p>
+                            <p><b>Status: </b>Single</p>
+                        </td>
+                        <td>12345 - Jane Doe</td>
+                    </tr>
+                    <!-- More mock data can be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#table-kk').DataTable();
+    });
+</script>
+</body>
+</html>

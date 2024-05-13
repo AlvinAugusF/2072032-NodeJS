@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Keluarga Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS for form styling -->
+    <style>
+        /* Body background color */
+        body {
+            background-color: #f0f5ff; /* Light blue background */
+        }
+
+        /* Content header background color */
+        .content-header {
+            background-color: #007bff; /* Blue Navbar */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Breadcrumb background color */
+        .breadcrumb {
+            background-color: #e9ecef; /* Light gray breadcrumb background */
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        /* Card background color */
+        .card {
+            background-color: #fff; /* White card background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+        }
+
+        /* Form input border color */
+        .form-control:focus {
+            border-color: #007bff; /* Blue border color on focus */
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Blue shadow on focus */
+        }
+
+        /* Button color */
+        .btn-primary {
+            background-color: #007bff; /* Blue button background */
+            border-color: #007bff; /* Blue button border */
+        }
+    </style>
+</head>
+
+<body>
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Kartu Keluarga Form</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Kartu Keluarga Form</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="card p-4">
+            <form method="post" action="{{ route('kk-store') }}">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="kk-id">Nomor Kartu Keluarga</label>
+                        <input type="text" class="form-control" id="kk-id" placeholder="Nomor KK" name="id" required autofocus maxlength="15">
+                    </div>
+                    <div class="form-group">
+                        <label for="nama-kk">Nama Kepala Keluarga</label>
+                        <input type="text" maxlength="100" class="form-control" id="nama-kk" placeholder="Contoh: John Doe" required name="kepala_keluarga">
+                    </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

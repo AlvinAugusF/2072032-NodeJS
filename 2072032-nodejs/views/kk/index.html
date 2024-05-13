@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartu Keluarga Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+
+  <style>
+    body {
+      background-color: #f0f5ff;
+    }
+
+    .content-header {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .breadcrumb {
+      background-color: #e9ecef;
+      padding: 8px 15px;
+      border-radius: 5px;
+    }
+
+    .card {
+      background-color: #fff;
+    }
+
+    .btn-success {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .table thead th {
+      background-color: #007bff;
+      color: #fff;
+    }
+    .table tbody tr:hover {
+      background-color: #f0f8ff;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0">Kartu Keluarga Page</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Kartu Keluarga Page</li>
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<div class="content">
+  <div class="container-fluid">
+    <div class="card p-4">
+      <div class="card-title">
+        <a href="create.html" role="button" class="btn btn-success">Tambah Kartu Keluarga</a>
+      </div>
+      <div class="card-body">
+        <table id="table-kk" class="table table-striped">
+          <caption>List of kartu keluarga</caption>
+          <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nama Kepala Keluarga</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>12345</td>
+            <td>John Doe</td>
+            <td>
+              <a href="edit.html" role="button" class="btn btn-warning"><i
+                      class="fas fa-edit"></i> Edit</a>
+              <a data-url="" role="button" class="btn btn-danger"
+                 onclick="deleteConfirmation(this)"><i class="fas fa-trash"></i> Delete</a>
+            </td>
+          </tr>
+          <!-- End of loop -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+  $(document).ready(function() {
+    $('#table-kk').DataTable();
+  });
+
+  const deleteConfirmation = function (button) {
+    url = $(button).data('url');
+    Swal.fire({
+      title: 'Do you want to delete this data?',
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location = url;
+      }
+    })
+  }
+</script>
+</body>
+
+</html>
