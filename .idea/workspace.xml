@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="13b4677b-bbf5-4c50-8301-8fc819fa509b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/2072032-nodejs/controllers/kartuKeluargaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/2072032-nodejs/controllers/kartuKeluargaController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2072032-nodejs/controllers/pendudukController.js" beforeDir="false" afterPath="$PROJECT_DIR$/2072032-nodejs/controllers/pendudukController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2072032-nodejs/views/ctz/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2072032-nodejs/views/ctz/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2072032-nodejs/views/kk/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/2072032-nodejs/views/kk/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2072032-nodejs/views/kk/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/2072032-nodejs/views/kk/edit.html" afterDir="false" />
-    </list>
+    <list default="true" id="13b4677b-bbf5-4c50-8301-8fc819fa509b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +29,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -43,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715600481031</updated>
-      <workItem from="1715600483329" duration="170000" />
+      <workItem from="1715600483329" duration="474000" />
     </task>
     <servers />
   </component>
