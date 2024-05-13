@@ -8,43 +8,36 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-  <!-- Custom CSS for consistent styling -->
   <style>
-    /* Body background color */
     body {
-      background-color: #f0f5ff; /* Light blue background */
+      background-color: #f0f5ff;
     }
 
-    /* Navbar background color */
     .content-header {
-      background-color: #007bff; /* Blue Navbar */
+      background-color: #007bff;
       color: white;
       padding: 10px 0;
       text-align: center;
     }
 
-    /* Breadcrumb background color */
     .breadcrumb {
-      background-color: #e9ecef; /* Light gray breadcrumb background */
+      background-color: #e9ecef;
       padding: 8px 15px;
       border-radius: 5px;
     }
 
-    /* Card background color */
     .card {
-      background-color: #fff; /* White card background */
+      background-color: #fff;
     }
 
-    /* Form input border color */
     .form-control:focus {
-      border-color: #007bff; /* Blue border color on focus */
-      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Blue shadow on focus */
+      border-color: #007bff;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     }
 
-    /* Button color */
     .btn-primary {
-      background-color: #007bff; /* Blue button background */
-      border-color: #007bff; /* Blue button border */
+      background-color: #007bff;
+      border-color: #007bff;
     }
   </style>
 </head>
@@ -74,23 +67,18 @@
     <div class="card p-4">
       <div class="card-body">
         <form method="post" action="UPDATE_KK_ENDPOINT">
-          <!-- Replace UPDATE_KK_ENDPOINT with the appropriate URL for updating the Kartu Keluarga -->
-          <!-- CSRF token -->
           <input type="hidden" name="_token" value="CSRF_TOKEN_VALUE">
-          <!-- Replace CSRF_TOKEN_VALUE with the actual CSRF token -->
 
           <div class="form-group">
             <label for="kk-id">Nomor Kartu Keluarga</label>
             <input type="text" class="form-control" id="kk-id" placeholder="Nomor KK" name="id"
                    readonly maxlength="15" value="KK_ID_VALUE">
-            <!-- Replace KK_ID_VALUE with the actual Kartu Keluarga ID -->
           </div>
           <div class="form-group">
             <label for="nama-kk">Nama Kepala Keluarga</label>
             <input type="text" maxlength="100" class="form-control" id="nama-kk"
                    placeholder="Contoh: John Doe" required name="kepala_keluarga" autofocus
                    value="KK_KEPALA_KELUARGA_VALUE">
-            <!-- Replace KK_KEPALA_KELUARGA_VALUE with the actual Kepala Keluarga name -->
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -98,9 +86,7 @@
     </div>
   </div><!-- /.container-fluid -->
 </div>
-<!-- /.content -->
 
-<!-- Add your JavaScript links here -->
 </body>
 
 </html>
